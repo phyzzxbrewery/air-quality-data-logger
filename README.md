@@ -8,12 +8,19 @@ The data logger wrapper reads data from data logger connected via a serial inter
 For the web server the Flask framework is utilized in combination with socketio to allow for data push. Socketio is used to set-up bi-directional communication to push all incoming data to the web-client. It will automatically upgrade http to the web-sockets protocol ws if feasable. If the connection to the web server is via secure websockets (wss) will be used.
 ## Quick Start
 To set up the project locally download this rep and initialize the js and python projects. You will need python3.6+ for the python part and nodejs10+ for the js part which uses ES-features like modules, fetch and the like. Snowpack is used as development server and build tool for the js part.
-    ```bash
+
+    ```
     git clone https://github.com/phyzzxbrewery/air-quality-data-logger.git
     ```
+    
 To initialize the webclient for development
+
+```
     cd air-quality-data-logger/webclient
+    
     npm init
+```
+
 If you would like to start the development server:
     npm start
 As the data to be displayed require the web server running, you will also have to start the web server. To initialize the webserver
