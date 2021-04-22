@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "echarts/charts": "./echarts/charts.js",
+    "echarts/components": "./echarts/components.js",
+    "echarts/core": "./echarts/core.js",
+    "echarts/renderers": "./echarts/renderers.js",
+    "socket.io-client": "./socket.io-client.js"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "webclient",
+  "version": "0.0.1",
+  "description": "Frontent to view data from an CTS Air Quality Datalogger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "datalogger.git"
+  },
+  "keywords": [
+    "javascript",
+    "ES",
+    "socket",
+    "websocket"
+  ],
+  "author": "Michael Kiometzis",
+  "license": "MIT",
+  "dependencies": {
+    "echarts": "^5.0.2",
+    "snowpack": "^3.1.2",
+    "socket.io-client": "^4.0.0",
+    "sockets": "^0.4.2"
+  }
+}
