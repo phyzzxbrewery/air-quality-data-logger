@@ -1,18 +1,15 @@
-#from mongoengine.errors import OperationError
-from flask_mongoengine import MongoEngine
-from mongoengine import connect
-
-connect(host = os.environ.get('DATABASE_URL'))
-# prepare database
-db = MongoEngine()
+import os
+import mongoengine as db
+import logging
+logger = logging.getLogger('__name__')
 
 class AQData(db.Document):
 	timestamp = db.IntField()
-	pm25 = db.DictField()
-	humidity = db.DictField()
-	temperature = db.DictField()
-	co2 = db.DictField()
-	pressure = db.DictField()
+	pm25 = db.FloatField()
+	humidity = db.FloatField()
+	temperature = db.FloatField()
+	co2 = db.FloatField()
+	pressure = db.FloatField()
 	
 class PlantowerData(db.Document):
 	timestamp = db.IntField()
@@ -25,4 +22,9 @@ class PlantowerData(db.Document):
 	apm25 = db.FloatField()
 	apm10 = db.FloatField()
 	apm100 = db.FloatField()
+
+class XiaomiMiData(db.Document):
+	timestamp = db.IntField()
+	temperature = db.FloatField()
+	humidity = db.FloatField()
 
